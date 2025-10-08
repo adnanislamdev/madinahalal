@@ -14,9 +14,8 @@ import {
   Heart,
   Users,
   Award,
-  Instagram,
-  Facebook,
-  Twitter
+  Camera,
+  MessageCircle
 } from "lucide-react";
 
 export default function Home() {
@@ -264,13 +263,13 @@ export default function Home() {
               <h3 className="text-2xl font-semibold text-primary mb-6">Follow Us</h3>
               <div className="flex space-x-4">
                 <a href="https://www.instagram.com/your_instagram_username/" target="_blank" rel="noopener noreferrer" className="bg-primary hover:bg-secondary text-white p-3 rounded-lg transition-colors">
-                  <Instagram className="h-6 w-6" />
+                  <Camera className="h-6 w-6" />
                 </a>
                 <a href="https://www.facebook.com/your_facebook_page/" target="_blank" rel="noopener noreferrer" className="bg-primary hover:bg-secondary text-white p-3 rounded-lg transition-colors">
-                  <Facebook className="h-6 w-6" />
+                  <MessageCircle className="h-6 w-6" />
                 </a>
                 <a href="https://twitter.com/your_twitter_handle/" target="_blank" rel="noopener noreferrer" className="bg-primary hover:bg-secondary text-white p-3 rounded-lg transition-colors">
-                  <Twitter className="h-6 w-6" />
+                  <X className="h-6 w-6" />
                 </a>
               </div>
             </div>
@@ -310,13 +309,13 @@ export default function Home() {
               <h4 className="font-semibold mb-4">Follow Us</h4>
               <div className="flex space-x-3">
                 <a href="https://www.instagram.com/your_instagram_username/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
-                  <Instagram className="h-5 w-5" />
+                  <Camera className="h-5 w-5" />
                 </a>
                 <a href="https://www.facebook.com/your_facebook_page/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
-                  <Facebook className="h-5 w-5" />
+                  <MessageCircle className="h-5 w-5" />
                 </a>
                 <a href="https://twitter.com/your_twitter_handle/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
-                  <Twitter className="h-5 w-5" />
+                  <X className="h-5 w-5" />
                 </a>
               </div>
             </div>
