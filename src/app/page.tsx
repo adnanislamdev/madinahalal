@@ -25,7 +25,7 @@ export default function Home() {
   const videoSource = "/videoplayback.mov";
 
   // Logo image - replace this path with your actual logo
-  const logoImage = "/Cornerlogo.png";
+  const logoImage = "/Cornerlogo.jpg";
 
   return (
     <div className="min-h-screen bg-background">
