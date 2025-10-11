@@ -30,9 +30,9 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-background/95 backdrop-blur-sm border-b border-primary/20">
+      <nav className="fixed top-0 w-full z-50 bg-white border-b border-primary/20">
         <div className="w-full px-2 sm:px-4 lg:px-6">
-          <div className="flex justify-between items-center h-16">
+          <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <div className="flex-shrink-0">
               <Image
@@ -40,14 +40,14 @@ export default function Home() {
                 alt="Madina Halal Food Logo"
                 width={240}
                 height={80}
-                className="h-10 w-auto"
+                className="h-full w-auto object-contain"
                 priority
               />
             </div>
 
             {/* Desktop Navigation */}
             <div className="hidden md:block">
-              <div className="flex items-baseline space-x-8">
+              <div className="flex items-center space-x-8 h-full">
                 <a href="#home" className="text-foreground hover:text-primary transition-colors">Home</a>
                 <a href="#about" className="text-foreground hover:text-primary transition-colors">About</a>
                 <a href="#menu" className="text-foreground hover:text-primary transition-colors">Menu</a>
@@ -75,7 +75,7 @@ export default function Home() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden bg-background border-t border-primary/20"
+              className="md:hidden bg-white border-t border-primary/20"
             >
               <div className="px-2 pt-2 pb-3 space-y-1">
                 <a href="#home" className="block px-3 py-2 text-foreground hover:text-primary">Home</a>
