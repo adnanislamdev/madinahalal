@@ -40,7 +40,7 @@ export default function Home() {
                 alt="Madina Halal Food Logo"
                 width={80}
                 height={30}
-                className="h-full w-auto object-contain"
+                className="h-12 w-auto object-contain"
                 priority
               />
             </div>
