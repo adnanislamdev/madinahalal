@@ -2,11 +2,17 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-  --primary: #ff6c02;
+  --foreground: #c14a2a;
+  --primary: #d87025;
   --secondary: #fd5506;
   --accent: #ff6302;
-  --text-light: #d4821d;
+  --text-light: #bb6b0b;
+  --nav-color: #28060f;
+  --nav-text: #edbf65;
+  --nav-text-hover: #ab4b06;
+  --footer-bg: #28060f;
+  --footer-text: #9ca3af;
+  --footer-border: #374151;
 }
 
 /* Tailwind CSS v4 theme configuration */
@@ -17,20 +23,26 @@
   --color-secondary: var(--secondary);
   --color-accent: var(--accent);
   --color-text-light: var(--text-light);
+  --color-burgundy: var(--nav-color);
+  --color-nav-text: var(--nav-text);
+  --color-nav-text-hover: var(--nav-text-hover);
+  --color-footer-bg: var(--footer-bg);
+  --color-footer-text: var(--footer-text);
+  --color-footer-border: var(--footer-border);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #d4821d;
     --primary: #ff7105;
     --secondary: #fa6400;
     --accent: #ff7700;
     --text-light: #9CA3AF;
   }
-}
+} */
 
 body {
   background: var(--background);
