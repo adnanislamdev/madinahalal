@@ -31,19 +31,20 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-white border-b border-primary/20">
+        {/* Corner Logo - positioned absolutely */}
+        <div className="absolute top-0 left-0 z-10">
+          <Image
+            src={logoImage}
+            alt="Madina Halal Food Logo"
+            width={80}
+            height={30}
+            className="h-12 w-auto object-contain"
+            priority
+          />
+        </div>
+        
         <div className="w-full px-2 sm:px-4 lg:px-6">
           <div className="flex justify-between items-center h-20">
-            {/* Logo */}
-            <div className="flex-shrink-0">
-              <Image
-                src={logoImage}
-                alt="Madina Halal Food Logo"
-                width={80}
-                height={30}
-                className="h-12 w-auto object-contain"
-                priority
-              />
-            </div>
 
             {/* Desktop Navigation */}
             <div className="hidden md:block">
