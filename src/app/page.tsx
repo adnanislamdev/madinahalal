@@ -5,8 +5,6 @@ import {
   Phone, 
   MapPin, 
   Clock, 
-  Star, 
-  UtensilsCrossed,
   Heart,
   Users,
   Award,

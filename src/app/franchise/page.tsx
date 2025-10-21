@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Users, MapPin, DollarSign, CheckCircle, Upload } from "lucide-react";
+import { Users, MapPin, DollarSign, Upload } from "lucide-react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 
@@ -181,7 +181,7 @@ export default function FranchisePage() {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-primary mb-4">Franchise Inquiry Form</h2>
             <p className="text-xl text-text-light">
-              Ready to join our family? Fill out the form below and we'll get back to you soon.
+              Ready to join our family? Fill out the form below and we&apos;ll get back to you soon.
             </p>
           </div>
 
