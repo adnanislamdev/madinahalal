@@ -38,8 +38,8 @@ export default function Home() {
               <Image
                 src={logoImage}
                 alt="Madina Halal Food Logo"
-                width={120}
-                height={40}
+                width={80}
+                height={30}
                 className="h-full w-auto object-contain"
                 priority
               />
