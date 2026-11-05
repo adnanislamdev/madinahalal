@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Users, MapPin, DollarSign, Upload } from "lucide-react";
+import { Users, MapPin, DollarSign, Upload, CheckCircle2 } from "lucide-react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 
@@ -15,6 +15,7 @@ export default function FranchisePage() {
     currentFranchise: "",
     resume: null as File | null
   });
+  const [submitted, setSubmitted] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -35,24 +36,9 @@ export default function FranchisePage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Create FormData for file upload
-    const submitData = new FormData();
-    submitData.append('firstName', formData.firstName);
-    submitData.append('lastName', formData.lastName);
-    submitData.append('email', formData.email);
-    submitData.append('phone', formData.phone);
-    submitData.append('currentFranchise', formData.currentFranchise);
-    if (formData.resume) {
-      submitData.append('resume', formData.resume);
-    }
+    // No backend is wired up yet — show an inline confirmation instead.
+    setSubmitted(true);
 
-    // TODO: Configure this to send to your company email
-    // You can use services like Formspree, Netlify Forms, or your own backend
-    console.log('Form submitted:', formData);
-    
-    // For now, we'll just show an alert
-    alert('Thank you for your interest! We will contact you soon.');
-    
     // Reset form
     setFormData({
       firstName: "",
@@ -68,11 +54,10 @@ export default function FranchisePage() {
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      {/* Hero Section with Background Image */}
-      <section className="relative pt-20 pb-16 bg-gradient-to-r from-primary/90 to-secondary/90">
-        {/* Background Image Placeholder */}
-        <div className="absolute inset-0 bg-[url('/franchise-background.jpg')] bg-cover bg-center bg-no-repeat opacity-20"></div>
-        {/* TODO: Replace '/franchise-background.jpg' with actual franchise background image */}
+      {/* Hero Section */}
+      <section className="relative pt-40 pb-24 bg-[var(--nav-color)] overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/menu/lamb-platter.jpg')] bg-cover bg-center bg-no-repeat opacity-25"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[var(--nav-color)]/40 to-[var(--nav-color)]"></div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center text-white">
@@ -81,10 +66,10 @@ export default function FranchisePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-5xl md:text-6xl font-bold mb-6" style={{ color: '#c14a2a' }}>
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-[var(--nav-text)]">
                 Franchise Opportunity
               </h1>
-              <p className="text-xl md:text-2xl mb-8 font-bold max-w-4xl mx-auto" style={{ color: '#c14a2a' }}>
+              <p className="text-xl md:text-2xl max-w-4xl mx-auto text-gray-200">
                 Join Madina Halal Food in bringing authentic halal cuisine to communities nationwide. 
                 Be part of our growing family and share our passion for quality halal food.
               </p>
@@ -191,6 +176,20 @@ export default function FranchisePage() {
             transition={{ duration: 0.6 }}
             className="bg-white rounded-lg shadow-lg p-8"
           >
+            {submitted ? (
+              <div className="text-center py-8">
+                <CheckCircle2 className="h-14 w-14 text-green-600 mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Application received</h3>
+                <p className="text-gray-600 mb-6">Thank you for your interest! Our franchise team will reach out within a few business days.</p>
+                <button
+                  type="button"
+                  onClick={() => setSubmitted(false)}
+                  className="text-primary font-semibold hover:text-secondary"
+                >
+                  Submit another inquiry
+                </button>
+              </div>
+            ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
@@ -299,6 +298,7 @@ export default function FranchisePage() {
                 </button>
               </div>
             </form>
+            )}
           </motion.div>
         </div>
       </section>
