@@ -25,10 +25,9 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Contact Info</h4>
             <ul className="space-y-2 text-[var(--footer-text)]">
-              <li>{CONTACT.addressLine1}</li>
-              <li>{CONTACT.addressLine2}</li>
-              <li><a href={CONTACT.phoneHref} className="hover:text-white transition-colors">{CONTACT.phone}</a></li>
-              <li><a href={`mailto:${CONTACT.email}`} className="hover:text-white transition-colors">{CONTACT.email}</a></li>
+              <li>{CONTACT.address}</li>
+              <li>Phone: {CONTACT.phone}</li>
+              <li>Email: {CONTACT.email}</li>
             </ul>
           </div>
           <div>

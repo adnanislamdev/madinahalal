@@ -20,7 +20,7 @@ import {
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import ReservationButton from "./components/ReservationButton";
-import { CONTACT, HOURS, ORDER_URL, SOCIALS } from "../lib/site";
+import { CONTACT, HOURS_TBD, ORDER_URL, SOCIALS } from "../lib/site";
 
 const FEATURED = [
   { name: "Chicken Platter", price: "$15.99", image: "/menu/chicken-platter.jpg" },
@@ -156,7 +156,7 @@ export default function Home() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-primary mb-4">Visit Us</h2>
             <p className="text-xl text-text-light max-w-3xl mx-auto">
-              Come experience our authentic halal cuisine in a warm and welcoming atmosphere
+              Our first location is coming soon. In the meantime, order online for delivery.
             </p>
           </div>
 
@@ -165,10 +165,7 @@ export default function Home() {
               <h3 className="text-2xl font-semibold text-primary mb-6">Location</h3>
               <div className="flex items-start gap-3 mb-6">
                 <MapPin className="h-5 w-5 text-primary mt-1 shrink-0" />
-                <div>
-                  <p>{CONTACT.addressLine1}</p>
-                  <p>{CONTACT.addressLine2}</p>
-                </div>
+                <p>{CONTACT.address}</p>
               </div>
               <div className="flex flex-wrap gap-3">
                 <a
@@ -189,14 +186,7 @@ export default function Home() {
               <h3 className="text-2xl font-semibold text-primary mb-6">Hours</h3>
               <div className="flex items-start gap-3">
                 <Clock className="h-5 w-5 text-primary mt-1 shrink-0" />
-                <dl className="w-full space-y-2">
-                  {HOURS.map((h) => (
-                    <div key={h.days} className="flex justify-between gap-4 border-b border-primary/10 pb-2 last:border-0">
-                      <dt className="font-medium">{h.days}</dt>
-                      <dd className="text-text-light">{h.time}</dd>
-                    </div>
-                  ))}
-                </dl>
+                <p>{HOURS_TBD}</p>
               </div>
             </div>
           </div>
@@ -211,16 +201,16 @@ export default function Home() {
             Catering, large parties, or just a question about the menu — we&apos;d love to hear from you.
           </p>
           <div className="grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <a href={CONTACT.phoneHref} className="group rounded-xl bg-white/5 hover:bg-white/10 p-6 transition-colors">
+            <div className="rounded-xl bg-white/5 p-6">
               <Phone className="h-8 w-8 text-[var(--nav-text)] mx-auto mb-3" />
               <p className="text-sm uppercase tracking-wide text-gray-400 mb-1">Call</p>
               <p className="text-white font-medium">{CONTACT.phone}</p>
-            </a>
-            <a href={`mailto:${CONTACT.email}`} className="group rounded-xl bg-white/5 hover:bg-white/10 p-6 transition-colors">
+            </div>
+            <div className="rounded-xl bg-white/5 p-6">
               <Mail className="h-8 w-8 text-[var(--nav-text)] mx-auto mb-3" />
               <p className="text-sm uppercase tracking-wide text-gray-400 mb-1">Email</p>
               <p className="text-white font-medium break-all">{CONTACT.email}</p>
-            </a>
+            </div>
             <div className="rounded-xl bg-white/5 p-6">
               <p className="text-sm uppercase tracking-wide text-gray-400 mb-4">Follow</p>
               <div className="flex justify-center gap-3">

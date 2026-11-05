@@ -3,19 +3,14 @@
 
 export const ORDER_URL = "https://www.ubereats.com/search?q=halal";
 
+// Location isn't open yet — fill these in once the address and hours are set.
 export const CONTACT = {
-  addressLine1: "123 Main Street",
-  addressLine2: "City, State 12345",
-  phone: "(555) 123-4567",
-  phoneHref: "tel:+15551234567",
-  email: "info@madinahalal.com",
+  address: "Location TBD",
+  phone: "TBD",
+  email: "TBD",
 };
 
-export const HOURS = [
-  { days: "Monday – Thursday", time: "11:00 AM – 10:00 PM" },
-  { days: "Friday – Saturday", time: "11:00 AM – 11:00 PM" },
-  { days: "Sunday", time: "12:00 PM – 9:00 PM" },
-];
+export const HOURS_TBD = "Hours TBD — opening soon";
 
 export const SOCIALS = {
   instagram: "https://www.instagram.com/",
